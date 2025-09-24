@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>關於我｜陳昱丞</title>
+  <style>
+    body { font-family: system-ui,-apple-system,"Noto Sans TC",Arial; line-height: 1.7; margin: 0; }
+    header, main, footer { max-width: 960px; margin: auto; padding: 16px; }
+    header { background: #111; color: #fff; }
+    img.avatar { width: 220px; max-width: 100%; border-radius: 16px; display: block; }
+    .grid { display: grid; grid-template-columns: 220px 1fr; gap: 20px; align-items: start; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background: #f6f6f6; }
+    .tag { display: inline-block; padding: 2px 10px; border-radius: 999px; background: #eef; margin-right: 6px; font-size: 0.9rem; }
+    .section { margin-top: 28px; }
+    footer { font-size: 0.9rem; color: #555; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>關於我（About Me）</h1>
+    <p><strong>陳昱丞</strong>｜淡江大學 <em>資管系</em> 三年級</p>
+  </header>
+
+  <main>
+    <!-- 基本資訊 + 個人照片 -->
+    <div class="grid section" id="profile">
+      <div>
+        <img class="avatar" src="個人照.JPG" alt="陳昱丞的個人照片" />
+        <p><span class="tag">友善</span><span class="tag">準時</span><span class="tag">願意學習</span></p>
+      </div>
+      <div>
+        <h2>個人基本資訊</h2>
+        <table aria-label="個人基本資料表">
+          <thead>
+            <tr><th>項目</th><th>內容</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>姓名</td><td>陳昱丞</td></tr>
+            <tr><td>科系／年級</td><td>資訊管理學系／三年級</td></tr>
+            <tr><td>就讀學校</td><td>淡江大學</td></tr>
+          </tbody>
+        </table>
+        <p>我重視 <strong>團隊合作</strong> 與 <em>時間管理</em>，期待用所學解決實際問題。</p>
+      </div>
+    </div>
+
+    <!-- 興趣愛好：列表 -->
+    <div class="section" id="hobby">
+      <h2>興趣愛好</h2>
+      <h3>平時我喜歡：</h3>
+      <ul>
+        <li>唱歌（放鬆心情、訓練節奏感）</li>
+        <li>打牌（培養記憶與機率思維）</li>
+        <li>打撞球（專注與手眼協調）</li>
+      </ul>
+    </div>
+
+    <!-- 學習經歷：表格 -->
+    <div class="section" id="education">
+      <h2>學習經歷</h2>
+      <table aria-label="學習經歷表">
+        <thead>
+          <tr>
+            <th>就讀階段</th>
+            <th>班別／科別</th>
+            <th>備註</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>國中</td>
+            <td>音樂班</td>
+            <td>培養舞台膽量與團隊默契</td>
+          </tr>
+          <tr>
+            <td>高中</td>
+            <td>普通班</td>
+            <td>打好數理與語文基礎</td>
+          </tr>
+          <tr>
+            <td>大學</td>
+            <td>淡江大學 資訊管理學系</td>
+            <td>資料處理、網頁基礎、專案協作</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 聯絡方式：至少兩個超連結 -->
+    <div class="section" id="contact">
+      <h2>聯絡方式</h2>
+      <p>
+        歡迎來信：<a href="mailto:yourname@example.com" target="_blank" rel="noopener">Email（mailto）</a>，
+        或透過 <a href="https://mail.google.com/mail/u/0/?ogbl#inbox" target="_blank" rel="noopener">Gmail 收件匣</a> 聯絡我。<br />
+        想了解我就讀的學校，可參考
+        <a href="https://www.tku.edu.tw/" target="_blank" rel="noopener">淡江大學官網</a>。
+      </p>
+    </div>
+
+    <!-- 未來目標：段落 + 有序清單 -->
+    <div class="section" id="goals">
+      <h2>未來目標</h2>
+      <p>
+        近期目標是 <strong>準時畢業</strong>，累積實作經驗；中程規劃是找到一份能發揮所長的
+        <em>資訊相關工作</em>，持續學習前後端與資料處理。
+      </p>
+      <h4>短期清單</h4>
+      <ol>
+        <li>完成系上專題並定期版本控管</li>
+        <li>建立作品集網站（含本頁延伸）</li>
+        <li>參與實習或校外競賽累積履歷</li>
+      </ol>
+      <h5>備註</h5>
+      <p><span>保持好奇心、養成紀錄習慣，是我認為最重要的學習策略。</span></p>
+    </div>
+  </main>
+
+  <footer>
+    <h6>版權與作者</h6>
+    <p>© 2025 陳昱丞｜這是一份 Week02 課堂實作的自我介紹網頁。</p>
+  </footer>
+</body>
+</html>
