@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>我的作品集｜陳昱丞</title>
+  <meta name="description" content="陳昱丞的個人作品集，包含關於我、技能、作品與聯絡方式。">
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    /* 可選：少量自訂樣式 */
+    .avatar { max-width: 220px; }
+    .navbar-brand span { letter-spacing: .5px; }
+    .section-title { position: relative; display: inline-block; }
+    .section-title::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 3px; background: #0d6efd; border-radius: 999px; }
+  </style>
+</head>
+<body>
+  <!-- 1. Navbar（導覽列） -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="主導覽">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#hero">
+        <span>陳昱丞</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="切換導覽">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#hero">首頁</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">關於</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">作品</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">聯絡</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. Hero Section（首頁區塊） -->
+  <section id="hero" class="py-5 bg-light text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold">嗨，我是陳昱丞</h1>
+      <p class="lead mb-4">淡江大學資管系三年級生，喜歡把想法做成能用的作品。這裡放的是我的小小成果與學習歷程。</p>
+      <a href="#portfolio" class="btn btn-primary btn-lg me-2">看作品</a>
+      <a href="#contact" class="btn btn-outline-secondary btn-lg">聯絡我</a>
+    </div>
+  </section>
+
+  <!-- 3. About Section（關於我） -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 section-title">關於我</h2>
+      <div class="row align-items-start g-4">
+        <div class="col-md-4 text-center text-md-start">
+          <img src="https://picsum.photos/400?random=20" alt="個人頭像" class="img-fluid rounded-circle avatar mb-2">
+          <div>
+            <span class="badge text-bg-primary me-1">友善</span>
+            <span class="badge text-bg-success me-1">準時</span>
+            <span class="badge text-bg-info">願意學習</span>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <p class="fs-5">我就讀於 <span class="fw-semibold">淡江大學資訊管理學系</span>，熱衷於網頁前端與資料處理。平常注重 <span class="text-decoration-underline">團隊合作</span> 與 <span class="text-primary fw-bold">時間管理</span>，喜歡把課堂所學應用在實作。</p>
+          <p class="text-muted">興趣包含唱歌、打牌與撞球，這些活動讓我維持節奏感、專注度與策略思考。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Skills Section（技能展示） -->
+  <section id="skills" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4 section-title">技能 Skills</h2>
+      <div class="row g-4">
+        <!-- 技能 1 -->
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://picsum.photos/600/400?random=1" class="card-img-top" alt="HTML/CSS 圖示">
+            <div class="card-body">
+              <h5 class="card-title">HTML / CSS / Bootstrap</h5>
+              <p class="card-text">能建立響應式版面、掌握網格系統與常用元件（Navbar、Card、Form）。</p>
+            </div>
+          </div>
+        </div>
+        <!-- 技能 2 -->
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://picsum.photos/600/400?random=2" class="card-img-top" alt="JavaScript 圖示">
+            <div class="card-body">
+              <h5 class="card-title">JavaScript 基礎</h5>
+              <p class="card-text">熟悉 DOM 操作與事件處理，能撰寫互動小功能與表單驗證。</p>
+            </div>
+          </div>
+        </div>
+        <!-- 技能 3 -->
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://picsum.photos/600/400?random=3" class="card-img-top" alt="資料處理 圖示">
+            <div class="card-body">
+              <h5 class="card-title">資料處理</h5>
+              <p class="card-text">了解資料清理與基本分析流程，能將結果整理為圖表或表格呈現。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Portfolio Section（作品集） -->
+  <section id="portfolio" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 section-title">作品集 Portfolio</h2>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100">
+            <img src="https://picsum.photos/600/400?random=11" class="card-img-top" alt="作品一縮圖">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">個人履歷網頁</h5>
+              <p class="card-text">以 Bootstrap 打造的單頁履歷，含導覽列、技能條與聯絡表單。</p>
+              <a class="mt-auto btn btn-outline-primary" href="#" aria-label="查看個人履歷網頁詳情">查看詳情</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100">
+            <img src="https://picsum.photos/600/400?random=12" class="card-img-top" alt="作品二縮圖">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">待辦清單小工具</h5>
+              <p class="card-text">使用 JavaScript 製作的待辦清單，支援新增、完成與刪除任務。</p>
+              <a class="mt-auto btn btn-outline-primary" href="#" aria-label="查看待辦清單小工具詳情">查看詳情</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100">
+            <img src="https://picsum.photos/600/400?random=13" class="card-img-top" alt="作品三縮圖">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">資料視覺化展示</h5>
+              <p class="card-text">整理開放資料並以圖表呈現，練習資料處理與視覺化思維。</p>
+              <a class="mt-auto btn btn-outline-primary" href="#" aria-label="查看資料視覺化展示詳情">查看詳情</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Contact Section（聯絡表單） -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4 section-title">聯絡我 Contact</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">姓名</label>
+              <input type="text" id="name" class="form-control" placeholder="請輸入您的姓名" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">主旨</label>
+              <input type="text" id="subject" class="form-control" placeholder="想聊什麼？">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">訊息</label>
+              <textarea id="message" rows="5" class="form-control" placeholder="留言給我…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">送出</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Footer（頁尾） -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-2">© 2025 陳昱丞 | 淡江大學資管系</p>
+      <div class="mb-2">
+        <a class="text-white text-decoration-none me-3" target="_blank" rel="noopener" href="https://www.facebook.com/">Facebook</a>
+        <a class="text-white text-decoration-none me-3" target="_blank" rel="noopener" href="https://www.instagram.com/">Instagram</a>
+        <a class="text-white text-decoration-none" target="_blank" rel="noopener" href="https://www.linkedin.com/">LinkedIn</a>
+      </div>
+      <small class="text-white-50">本頁採用 Bootstrap 5 製作，支援手機與桌機瀏覽。</small>
+    </div>
+  </footer>
+</body>
+</html>
