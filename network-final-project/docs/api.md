@@ -3,68 +3,91 @@
 
 ---
 
-## 一、API 基本資訊
+一、API 基本資訊
 
-- **Base URL**
+Base URL
 http://localhost:3000/api
-- **資料格式**
-- Request / Response 皆使用 JSON
-- Content-Type：`application/json`
 
----
+資料格式
+Request / Response 皆使用 JSON
+Content-Type: application/json
 
-## 二、商品 API（Products）
+二、商品 API（Products）
+1. 取得所有商品
 
----
+Method：GET
+URL：/products
 
-### 1. 取得所有商品
-
-- **路由**
-GET /products
-
-- **說明**
+說明
 取得系統中所有商品資料。
 
-- **Request 參數**
-無
+Response 範例
 
-- **Response 範例**
-```json
-[
-  {
+{
+  "success": true,
+  "data": [
+    {
+      "_id": "65f1a1b2c3d4",
+      "name": "測試商品",
+      "price": 999,
+      "imageUrl": "https://via.placeholder.com/600x400"
+    }
+  ]
+}
+
+2. 取得單一商品
+
+Method：GET
+URL：/products/:id
+
+說明
+依商品 ID 取得單一商品詳細資料。
+
+Path Parameter
+
+參數	說明
+id	商品 ID（MongoDB ObjectId）
+
+Response 範例
+
+{
+  "success": true,
+  "data": {
     "_id": "65f1a1b2c3d4",
     "name": "測試商品",
     "price": 999,
     "imageUrl": "https://via.placeholder.com/600x400"
   }
-]
-2. 新增商品
-- **路由**
-POST /products
-說明
-新增一筆商品資料至資料庫。
+}
+
+3. 新增商品
+
+Method：POST
+URL：/products
 
 Request Body
+
 {
   "name": "Logitech 滑鼠",
   "price": 990,
   "imageUrl": "https://example.com/mouse.jpg"
 }
+
+
 Response 範例
+
 {
-  "acknowledged": true,
-  "insertedId": "65f1b2c3d4e5"
+  "success": true,
+  "data": {
+    "insertedId": "65f1b2c3d4e5"
+  }
 }
-3️⃣ 更新商品
-API 路由
 
-PUT /products/:id
-說明
-依商品 ID 更新指定商品資料。
-Path Parameter
+4. 更新商品
 
-參數	說明
-id	商品 ID（MongoDB ObjectId）
+Method：PUT
+URL：/products/:id
+
 Request Body
 
 {
@@ -72,47 +95,44 @@ Request Body
   "price": 1290,
   "imageUrl": "https://example.com/newmouse.jpg"
 }
+
+
 Response 範例
 
 {
-  "modifiedCount": 1
+  "success": true,
+  "data": {
+    "modifiedCount": 1
+  }
 }
-4️⃣ 刪除商品
 
-API 路由
+5. 刪除商品
 
-DELETE /products/:id
+Method：DELETE
+URL：/products/:id
 
-
-說明
-依商品 ID 刪除指定商品。
-
-Path Parameter
-
-參數	說明
-id	商品 ID（MongoDB ObjectId）
 Response 範例
 
 {
-  "deletedCount": 1
+  "success": true,
+  "data": {
+    "deletedCount": 1
+  }
 }
+
 三、錯誤處理說明
 500 Internal Server Error
-
-說明
-當伺服器發生錯誤時回傳。
-
-Response 範例
-
 {
-  "error": "Server error"
+  "success": false,
+  "message": "Server error"
 }
-四、API 使用說明補充
 
-本 API 為 RESTful API 設計
+四、補充說明
 
-前端透過 Fetch API 呼叫上述 API
+本 API 採 RESTful API 設計
 
-API 與 MongoDB 資料庫進行資料存取
+前端透過 Fetch API 呼叫
 
-實際應用於商品管理系統之 CRUD 功能
+API 實際與 MongoDB 進行 CRUD 操作
+
+實際應用於商品管理系統後台管理功能
