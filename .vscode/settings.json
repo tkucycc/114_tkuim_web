@@ -1,0 +1,51 @@
+{
+    "update.mode": "manual",
+    "update.enableWindowsBackgroundUpdates": false,
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (xelatex)",
+            "tools": [
+                "latexmk_xelatex"
+            ]
+        },
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk_xelatex",
+            "command": "latexmk",
+            "args": [
+                "-xelatex",
+                "-halt-on-error",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-halt-on-error",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.clean.enabled": true,
+    "latex-workshop.latex.clean.fileTypes": [
+        "aux","bbl","blg","idx","ind","lof","lot","out","toc","acn","acr","alg","glg","glo","ist","fls","fdb_latexmk","synctex.gz"
+    ],
+    "workbench.colorTheme": "Default Dark Modern"
+
+    ,
+    "latex-workshop.view.pdf.viewer": "tab"
+
+}
